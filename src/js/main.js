@@ -5,16 +5,9 @@ loadHeaderFooter();
 
 const search = new BookSearch();
 
-document.querySelector("#search-form").addEventListener("submit", async (e) => {
+document.querySelector("#search-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const query = document.querySelector("#search-input").value.trim();
   if (!query) return;
-
-  // For now, log results. Next we'll build the results page.
-  try {
-    const results = await search.search(query);
-    console.log("Results:", results);
-  } catch (err) {
-    console.error("Search error:", err);
-  }
+  window.location.href = `/search/index.html?q=${encodeURIComponent(query)}`;
 });
