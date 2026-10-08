@@ -22,4 +22,22 @@ export default class BookSearch {
     const data = await response.json();
     return data.docs.map(normalizeBook);
   }
+
+  async getBookById(id) {
+    const url = `${OPEN_LIBRARY_URL}/works/${id}.json`;
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Failed to fetch book details");
+    }
+    const data = await response.json();
+    return {
+      id,
+      title: data.title || "Untitled",
+      description:
+        typeof data.description === "string"
+          ? data.description
+          : data.description?.value || "No description available.",
+      subjects: data.subjects?.slice(0, 8) || [],
+    };
+  }
 }
