@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelves | My Reading List</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <header class="divider" id="main-header"></header>
+
+    <main class="divider">
+        <h2>My Reading List</h2>
+
+        <div class="filter-bar">
+            <label for="status-filter">Filter:</label>
+            <select id="status-filter">
+                <option value="all">All</option>
+                <option value="want">Want to Read</option>
+                <option value="reading">Currently Reading</option>
+                <option value="finished">Finished</option>
+            </select>
+        </div>
+
+        <ul class="book-list" id="book-list"></ul>
+    </main>
+
+    <footer id="main-footer"></footer>
+
+    <script type="module" src="/js/reading-list.js"></script>
+</body>
+
+</html>

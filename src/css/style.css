@@ -153,3 +153,36 @@ footer {
 #add-to-list {
   margin-top: 1.5rem;
 }
+
+.filter-bar {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-bar select,
+.book-card__status {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.book-card__status-label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.book-card__remove {
+  margin-top: 0.5rem;
+  background-color: #b33;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.book-card__remove:hover {
+  background-color: #911;
+}

@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, "src/index.html"),
         search: resolve(__dirname, "src/search/index.html"),
         book: resolve(__dirname, "src/book/index.html"),
+        readingList: resolve(__dirname, "src/reading-list/index.html"),
       },
     },
   },
